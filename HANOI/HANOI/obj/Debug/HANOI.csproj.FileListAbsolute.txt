@@ -1,0 +1,11 @@
+D:\Git\hanoi\HANOI\HANOI\bin\Debug\HANOI.exe.config
+D:\Git\hanoi\HANOI\HANOI\bin\Debug\HANOI.exe
+D:\Git\hanoi\HANOI\HANOI\bin\Debug\HANOI.pdb
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.csprojAssemblyReference.cache
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.Form1.resources
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.Properties.Resources.resources
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.csproj.GenerateResource.cache
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.exe
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.pdb
+D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.Thenottwotowers.resources
