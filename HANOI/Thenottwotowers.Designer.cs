@@ -40,7 +40,12 @@ namespace HANOI
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btn_left
@@ -82,71 +87,125 @@ namespace HANOI
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 378);
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Location = new System.Drawing.Point(10, 430);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 60);
+            this.panel1.Size = new System.Drawing.Size(220, 30);
             this.panel1.TabIndex = 4;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(8, 8);
+            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Location = new System.Drawing.Point(105, 150);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(209, 60);
+            this.panel2.Size = new System.Drawing.Size(31, 309);
             this.panel2.TabIndex = 5;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(303, 378);
+            this.panel3.BackColor = System.Drawing.Color.Gold;
+            this.panel3.Location = new System.Drawing.Point(178, 180);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(209, 60);
-            this.panel3.TabIndex = 5;
+            this.panel3.Size = new System.Drawing.Size(200, 20);
+            this.panel3.TabIndex = 6;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(579, 378);
+            this.panel4.BackColor = System.Drawing.Color.Gold;
+            this.panel4.Location = new System.Drawing.Point(178, 24);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(209, 60);
-            this.panel4.TabIndex = 5;
+            this.panel4.Size = new System.Drawing.Size(80, 20);
+            this.panel4.TabIndex = 7;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(382, 149);
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Location = new System.Drawing.Point(393, 155);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(52, 286);
-            this.panel5.TabIndex = 6;
+            this.panel5.Size = new System.Drawing.Size(31, 309);
+            this.panel5.TabIndex = 7;
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(85, 149);
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Location = new System.Drawing.Point(299, 432);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(52, 286);
-            this.panel6.TabIndex = 7;
+            this.panel6.Size = new System.Drawing.Size(222, 32);
+            this.panel6.TabIndex = 6;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(657, 152);
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.Location = new System.Drawing.Point(660, 155);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(52, 286);
-            this.panel7.TabIndex = 8;
+            this.panel7.Size = new System.Drawing.Size(31, 309);
+            this.panel7.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gray;
+            this.panel8.Location = new System.Drawing.Point(566, 432);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(222, 32);
+            this.panel8.TabIndex = 6;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Gold;
+            this.panel9.Location = new System.Drawing.Point(177, 154);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(180, 20);
+            this.panel9.TabIndex = 7;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Gold;
+            this.panel10.Location = new System.Drawing.Point(177, 128);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(160, 20);
+            this.panel10.TabIndex = 8;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Gold;
+            this.panel11.Location = new System.Drawing.Point(177, 50);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(100, 20);
+            this.panel11.TabIndex = 11;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Gold;
+            this.panel12.Location = new System.Drawing.Point(177, 76);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(120, 20);
+            this.panel12.TabIndex = 10;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Gold;
+            this.panel13.Location = new System.Drawing.Point(177, 102);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(140, 20);
+            this.panel13.TabIndex = 9;
             // 
             // Thenottwotowers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_down);
             this.Controls.Add(this.btn_up);
@@ -154,7 +213,6 @@ namespace HANOI
             this.Controls.Add(this.btn_left);
             this.Name = "Thenottwotowers";
             this.Text = "Thenottwotowers";
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -172,5 +230,11 @@ namespace HANOI
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
     }
 }

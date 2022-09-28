@@ -9,3 +9,14 @@ D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
 D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.exe
 D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.pdb
 D:\Git\hanoi\HANOI\HANOI\obj\Debug\HANOI.Thenottwotowers.resources
+D:\Git\workhanoi\Hanoi\HANOI\bin\Debug\HANOI.exe.config
+D:\Git\workhanoi\Hanoi\HANOI\bin\Debug\HANOI.exe
+D:\Git\workhanoi\Hanoi\HANOI\bin\Debug\HANOI.pdb
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.csprojAssemblyReference.cache
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.Form1.resources
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.Properties.Resources.resources
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.Thenottwotowers.resources
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.csproj.GenerateResource.cache
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.exe
+D:\Git\workhanoi\Hanoi\HANOI\obj\Debug\HANOI.pdb

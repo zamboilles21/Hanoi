@@ -123,9 +123,9 @@ namespace HANOI
             this.ERB.Controls.Add(this.rdbtn_end_1);
             this.ERB.Controls.Add(this.rdbtn_end_3);
             this.ERB.Controls.Add(this.rdbtn_end_2);
-            this.ERB.Location = new System.Drawing.Point(292, 168);
+            this.ERB.Location = new System.Drawing.Point(286, 168);
             this.ERB.Name = "ERB";
-            this.ERB.Size = new System.Drawing.Size(173, 49);
+            this.ERB.Size = new System.Drawing.Size(150, 49);
             this.ERB.TabIndex = 13;
             this.ERB.TabStop = false;
             // 
@@ -136,7 +136,7 @@ namespace HANOI
             this.groupBox2.Controls.Add(this.rdbtn_start_2);
             this.groupBox2.Location = new System.Drawing.Point(286, 90);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(173, 49);
+            this.groupBox2.Size = new System.Drawing.Size(150, 49);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             // 
@@ -186,7 +186,7 @@ namespace HANOI
             this.groupBox3.Controls.Add(this.rdbtn_disc_2);
             this.groupBox3.Location = new System.Drawing.Point(286, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(173, 49);
+            this.groupBox3.Size = new System.Drawing.Size(150, 49);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             // 
