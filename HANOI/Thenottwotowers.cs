@@ -15,15 +15,16 @@ namespace HANOI
 
 
         // y+30 x+10
-        static int placeholder = 3;
+        static int placeholder = 7;
         static int placeholder2 = 1;
         static int handlocation=0;
         static int[,] field=new int[3,4];
+        Panel[] panelek = new Panel[7];
 
         public Thenottwotowers()
         {
             InitializeComponent();
-            instance = this;
+            
         }
 
         private void Thenottwotowers_Load_1(object sender, EventArgs e)
@@ -69,6 +70,7 @@ namespace HANOI
                 x = uj.Location.X;
                 y = uj.Location.Y;
                 this.Controls.Add(uj);
+                panelek[i] = uj;
             }
         }
 

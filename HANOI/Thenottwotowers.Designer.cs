@@ -95,7 +95,7 @@ namespace HANOI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Location = new System.Drawing.Point(165, 128);
+            this.panel2.Location = new System.Drawing.Point(160, 128);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(30, 310);
             this.panel2.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace HANOI
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Location = new System.Drawing.Point(391, 128);
+            this.panel5.Location = new System.Drawing.Point(386, 128);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(30, 310);
             this.panel5.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace HANOI
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.Location = new System.Drawing.Point(617, 128);
+            this.panel7.Location = new System.Drawing.Point(612, 128);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(30, 310);
             this.panel7.TabIndex = 7;
