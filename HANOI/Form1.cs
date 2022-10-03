@@ -24,7 +24,8 @@ namespace HANOI
 
         private void start_btn_Click(object sender, EventArgs e)
         {
-
+            Thenottwotowers uj = new Thenottwotowers();
+            uj.Show();
         }
 
         private void rdbtn_start_3_CheckedChanged(object sender, EventArgs e)
