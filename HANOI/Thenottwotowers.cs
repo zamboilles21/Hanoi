@@ -12,24 +12,63 @@ namespace HANOI
 {
     public partial class Thenottwotowers : Form
     {
-        static int placeholder = 0;
-        
+
+
+        // y+30 x+10
+        static int placeholder = 3;
+        static int placeholder2 = 1;
+        static int handlocation=0;
+        static int[,] field=new int[3,4];
+
         public Thenottwotowers()
         {
             InitializeComponent();
         }
 
-        private void Thenottwotowers_Load(object sender, EventArgs e)
+        private void Thenottwotowers_Load_1(object sender, EventArgs e)
         {
-            generatediscs(placeholder);
-
-            
-
+            generatediscs(placeholder, placeholder2);
         }
 
-        private void generatediscs(int v)
+        private void generatediscs(int placeholder, int placeholder2)
         {
+            int width=0;
+            int x=1;
+            int y=1;
+            switch (placeholder2)
+            {
+                case 1:
+                    x = panel_tower_1.Location.X;
+                    y = panel_tower_1.Location.Y;
+                    width = panel_tower_1.Width;
+                    handlocation = 1;
+                    break;
+                case 2:
+                    x = panel_tower_2.Location.X;
+                    y = panel_tower_2.Location.Y;
+                    width = panel_tower_2.Width;
+                    handlocation = 1;
+                    break;
+                case 3:
+                    x = panel_tower_3.Location.X;
+                    y = panel_tower_3.Location.Y;
+                    width = panel_tower_3.Width;
+                    handlocation = 1;
+                    break;
+            }
             
+            for (int i = 0; i < placeholder; i++)
+            {
+                Panel uj = new Panel();
+                uj.Location = new Point(x+10,y-30);
+                uj.Size = new Size(width-20, 20);
+                uj.BackColor=Color.Gold;
+                uj.Name = $"{i}_disc";
+                width = uj.Width;
+                x = uj.Location.X;
+                y = uj.Location.Y;
+                this.Controls.Add(uj);
+            }
         }
 
         private void btn_up_Click(object sender, EventArgs e)
@@ -51,5 +90,7 @@ namespace HANOI
         {
 
         }
+
+        
     }
 }
