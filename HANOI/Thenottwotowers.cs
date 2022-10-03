@@ -20,6 +20,9 @@ namespace HANOI
         static int handlocation=0;
         static int[,] field=new int[3,4];
         Panel[] panelek = new Panel[7];
+        static int[] tower1 = new int[7];
+        static int[] tower2 = new int[7];
+        static int[] tower3 = new int[7];
 
         public Thenottwotowers()
         {
@@ -44,18 +47,30 @@ namespace HANOI
                     y = panel_tower_1.Location.Y;
                     width = panel_tower_1.Width;
                     handlocation = 1;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        tower1[i] = i;
+                    }
                     break;
                 case 2:
                     x = panel_tower_2.Location.X;
                     y = panel_tower_2.Location.Y;
                     width = panel_tower_2.Width;
                     handlocation = 1;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        tower2[i] = i;
+                    }
                     break;
                 case 3:
                     x = panel_tower_3.Location.X;
                     y = panel_tower_3.Location.Y;
                     width = panel_tower_3.Width;
                     handlocation = 1;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        tower3[i] = i;
+                    }
                     break;
             }
             
