@@ -228,9 +228,9 @@ namespace HANOI
             // 
             // start_btn
             // 
-            this.start_btn.Location = new System.Drawing.Point(205, 243);
+            this.start_btn.Location = new System.Drawing.Point(200, 229);
             this.start_btn.Name = "start_btn";
-            this.start_btn.Size = new System.Drawing.Size(75, 23);
+            this.start_btn.Size = new System.Drawing.Size(80, 30);
             this.start_btn.TabIndex = 16;
             this.start_btn.Text = "Start";
             this.start_btn.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@ namespace HANOI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 278);
+            this.ClientSize = new System.Drawing.Size(464, 271);
             this.Controls.Add(this.start_btn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -248,8 +248,8 @@ namespace HANOI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(486, 317);
-            this.MinimumSize = new System.Drawing.Size(486, 317);
+            this.MaximumSize = new System.Drawing.Size(480, 310);
+            this.MinimumSize = new System.Drawing.Size(480, 310);
             this.Name = "Form1";
             this.Text = "Hanoi";
             this.Load += new System.EventHandler(this.Form1_Load);

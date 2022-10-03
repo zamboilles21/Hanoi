@@ -12,14 +12,44 @@ namespace HANOI
 {
     public partial class Thenottwotowers : Form
     {
+        static int placeholder = 0;
+        
         public Thenottwotowers()
         {
             InitializeComponent();
         }
 
+        private void Thenottwotowers_Load(object sender, EventArgs e)
+        {
+            generatediscs(placeholder);
+
+            
+
+        }
+
+        private void generatediscs(int v)
+        {
+            
+        }
+
         private void btn_up_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_down_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_right_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_left_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,15 +37,15 @@ namespace HANOI
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btn_left
@@ -56,6 +56,7 @@ namespace HANOI
             this.btn_left.TabIndex = 0;
             this.btn_left.Text = "Left";
             this.btn_left.UseVisualStyleBackColor = true;
+            this.btn_left.Click += new System.EventHandler(this.btn_left_Click);
             // 
             // btn_right
             // 
@@ -65,6 +66,7 @@ namespace HANOI
             this.btn_right.TabIndex = 1;
             this.btn_right.Text = "Right";
             this.btn_right.UseVisualStyleBackColor = true;
+            this.btn_right.Click += new System.EventHandler(this.btn_right_Click);
             // 
             // btn_up
             // 
@@ -84,11 +86,12 @@ namespace HANOI
             this.btn_down.TabIndex = 3;
             this.btn_down.Text = "Drop";
             this.btn_down.UseVisualStyleBackColor = true;
+            this.btn_down.Click += new System.EventHandler(this.btn_down_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(10, 430);
+            this.panel1.Location = new System.Drawing.Point(75, 424);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 30);
             this.panel1.TabIndex = 4;
@@ -96,9 +99,9 @@ namespace HANOI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Location = new System.Drawing.Point(105, 150);
+            this.panel2.Location = new System.Drawing.Point(170, 144);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(31, 309);
+            this.panel2.Size = new System.Drawing.Size(30, 310);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -112,42 +115,10 @@ namespace HANOI
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gold;
-            this.panel4.Location = new System.Drawing.Point(178, 24);
+            this.panel4.Location = new System.Drawing.Point(144, 346);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(80, 20);
             this.panel4.TabIndex = 7;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gray;
-            this.panel5.Location = new System.Drawing.Point(393, 155);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(31, 309);
-            this.panel5.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Gray;
-            this.panel6.Location = new System.Drawing.Point(299, 432);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(222, 32);
-            this.panel6.TabIndex = 6;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.Location = new System.Drawing.Point(660, 155);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(31, 309);
-            this.panel7.TabIndex = 7;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Gray;
-            this.panel8.Location = new System.Drawing.Point(566, 432);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(222, 32);
-            this.panel8.TabIndex = 6;
             // 
             // panel9
             // 
@@ -168,7 +139,7 @@ namespace HANOI
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Gold;
-            this.panel11.Location = new System.Drawing.Point(177, 50);
+            this.panel11.Location = new System.Drawing.Point(134, 372);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(100, 20);
             this.panel11.TabIndex = 11;
@@ -176,7 +147,7 @@ namespace HANOI
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Gold;
-            this.panel12.Location = new System.Drawing.Point(177, 76);
+            this.panel12.Location = new System.Drawing.Point(125, 398);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(120, 20);
             this.panel12.TabIndex = 10;
@@ -189,21 +160,53 @@ namespace HANOI
             this.panel13.Size = new System.Drawing.Size(140, 20);
             this.panel13.TabIndex = 9;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gray;
+            this.panel5.Location = new System.Drawing.Point(396, 144);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(30, 310);
+            this.panel5.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gray;
+            this.panel6.Location = new System.Drawing.Point(301, 424);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(220, 30);
+            this.panel6.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.Location = new System.Drawing.Point(622, 144);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(30, 310);
+            this.panel7.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gray;
+            this.panel8.Location = new System.Drawing.Point(527, 424);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(220, 30);
+            this.panel8.TabIndex = 6;
+            // 
             // Thenottwotowers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -227,14 +230,14 @@ namespace HANOI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
     }
 }
