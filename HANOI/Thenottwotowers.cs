@@ -12,26 +12,25 @@ namespace HANOI
 {
     public partial class Thenottwotowers : Form
     {
-        static int placeholder = 0;
-        public static int start2;
-        
-        //public static Form1 start;
+
+
+        // y+30 x+10
+        static int placeholder = 3;
+        static int placeholder2 = 1;
+        static int handlocation=0;
+        static int[,] field=new int[3,4];
+
         public Thenottwotowers()
         {
             InitializeComponent();
             
         }
 
-        public void ab(int start)
-        {
-            start2 = start;
-            MessageBox.Show(start2.ToString());
-        }
         private void Thenottwotowers_Load(object sender, EventArgs e)
         {
             generatediscs(placeholder);
-            MessageBox.Show(start2.ToString());
 
+            
 
         }
 
@@ -59,5 +58,7 @@ namespace HANOI
         {
 
         }
+
+        
     }
 }
