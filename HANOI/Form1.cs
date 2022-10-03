@@ -12,13 +12,13 @@ namespace HANOI
 {
     public partial class Form1 : Form
     {
-        public static Form1 instance;
+        
         public static int start;
         public static int end;
         public Form1()
         {
             InitializeComponent();
-            instance = this;
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,7 +31,8 @@ namespace HANOI
            
             Thenottwotowers uj = new Thenottwotowers();
             this.Hide();
-            uj.ab(start);
+           // uj.ab(start);
+           // uj.ab(end);
             uj.Show();
             
         }
