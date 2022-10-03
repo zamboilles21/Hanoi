@@ -23,7 +23,8 @@ namespace HANOI
         static int[] tower1 = new int[7];
         static int[] tower2 = new int[7];
         static int[] tower3 = new int[7];
-
+        static int START;
+        static int END;
         public Thenottwotowers()
         {
             InitializeComponent();
@@ -37,7 +38,14 @@ namespace HANOI
             
 
         }
-
+        public void abSTART(int start) 
+        { 
+            START=start;
+        }
+        public void abEND(int end)
+        {
+            END = end;
+        }
         private void generatediscs(int v)
         {
             int width=0;
