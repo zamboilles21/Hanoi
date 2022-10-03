@@ -176,7 +176,7 @@ namespace HANOI
             this.Controls.Add(this.btn_left);
             this.Name = "Thenottwotowers";
             this.Text = "Thenottwotowers";
-            this.Load += new System.EventHandler(this.Thenottwotowers_Load_1);
+            
             this.ResumeLayout(false);
 
         }

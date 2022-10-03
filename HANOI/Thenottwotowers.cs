@@ -30,12 +30,15 @@ namespace HANOI
             
         }
 
-        private void Thenottwotowers_Load_1(object sender, EventArgs e)
+        private void Thenottwotowers_Load(object sender, EventArgs e)
         {
-            generatediscs(placeholder, placeholder2);
+            generatediscs(placeholder);
+
+            
+
         }
 
-        private void generatediscs(int placeholder, int placeholder2)
+        private void generatediscs(int v)
         {
             int width=0;
             int x=1;
