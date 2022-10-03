@@ -15,10 +15,11 @@ namespace HANOI
 
 
         // y+30 x+10
-        static int placeholder = 3;
+        static int placeholder = 7;
         static int placeholder2 = 1;
         static int handlocation=0;
         static int[,] field=new int[3,4];
+        Panel[] panelek = new Panel[7];
 
         public Thenottwotowers()
         {
@@ -37,6 +38,19 @@ namespace HANOI
         private void generatediscs(int v)
         {
             
+            for (int i = 0; i < placeholder; i++)
+            {
+                Panel uj = new Panel();
+                uj.Location = new Point(x+10,y-30);
+                uj.Size = new Size(width-20, 20);
+                uj.BackColor=Color.Gold;
+                uj.Name = $"{i}_disc";
+                width = uj.Width;
+                x = uj.Location.X;
+                y = uj.Location.Y;
+                this.Controls.Add(uj);
+                panelek[i] = uj;
+            }
         }
 
         private void btn_up_Click(object sender, EventArgs e)
