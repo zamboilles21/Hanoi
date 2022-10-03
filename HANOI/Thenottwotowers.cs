@@ -13,10 +13,12 @@ namespace HANOI
     public partial class Thenottwotowers : Form
     {
         static int placeholder = 0;
-        
+
+        public static Thenottwotowers instance;
         public Thenottwotowers()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Thenottwotowers_Load(object sender, EventArgs e)
