@@ -23,6 +23,7 @@ namespace HANOI
         public Thenottwotowers()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void Thenottwotowers_Load_1(object sender, EventArgs e)
