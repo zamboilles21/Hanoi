@@ -43,3 +43,15 @@ C:\Users\Zámbó Illés\Documents\Prog\Hanoi\HANOI\obj\Debug\HANOI.csproj.Genera
 C:\Users\Zámbó Illés\Documents\Prog\Hanoi\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
 C:\Users\Zámbó Illés\Documents\Prog\Hanoi\HANOI\obj\Debug\HANOI.exe
 C:\Users\Zámbó Illés\Documents\Prog\Hanoi\HANOI\obj\Debug\HANOI.pdb
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\bin\Debug\HANOI.exe.config
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\bin\Debug\HANOI.exe
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\bin\Debug\HANOI.pdb
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.csproj.AssemblyReference.cache
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.csproj.SuggestedBindingRedirects.cache
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.Form1.resources
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.Properties.Resources.resources
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.Thenottwotowers.resources
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.csproj.GenerateResource.cache
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.exe
+C:\Users\Zámbó Illés\Desktop\Hanoi-1\HANOI\obj\Debug\HANOI.pdb

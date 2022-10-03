@@ -46,7 +46,7 @@ namespace HANOI
             }
             else
             {
-                DialogResult result2 = MessageBox.Show("Szeretnél újat játszani? ", "Sajnos vesztettél", MessageBoxButtons.YesNo);
+                DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
                 if (result2 == DialogResult.Yes)
                 {
                     Application.Restart();

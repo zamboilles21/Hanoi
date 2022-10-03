@@ -34,6 +34,8 @@ namespace HANOI
         private void Thenottwotowers_Load(object sender, EventArgs e)
         {
             generatediscs(placeholder);
+            
+
 
             
 
@@ -102,22 +104,22 @@ namespace HANOI
 
         private void btn_up_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(START.ToString());
         }
 
         private void btn_down_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(END.ToString());
         }
 
         private void btn_right_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(START.ToString());
         }
 
         private void btn_left_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(END.ToString());
         }
 
         
