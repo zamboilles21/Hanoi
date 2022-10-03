@@ -13,19 +13,25 @@ namespace HANOI
     public partial class Thenottwotowers : Form
     {
         static int placeholder = 0;
-
-        public static Thenottwotowers instance;
+        public static int start2;
+        
+        //public static Form1 start;
         public Thenottwotowers()
         {
             InitializeComponent();
-            instance = this;
+            
         }
 
+        public void ab(int start)
+        {
+            start2 = start;
+            MessageBox.Show(start2.ToString());
+        }
         private void Thenottwotowers_Load(object sender, EventArgs e)
         {
             generatediscs(placeholder);
+            MessageBox.Show(start2.ToString());
 
-            
 
         }
 
