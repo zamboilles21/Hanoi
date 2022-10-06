@@ -30,10 +30,33 @@ namespace HANOI
         {
            
             Thenottwotowers uj = new Thenottwotowers();
+
             this.Hide();
-           // uj.ab(start);
-           // uj.ab(end);
+            uj.abSTART(start);
+            uj.abEND(end);
             uj.Show();
+            
+            string message = $"A kezdő: {start.ToString()} az érkező: {end.ToString()}";
+            string title = "Ellenőrzés";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+            else
+            {
+                DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
+                if (result2 == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+                else
+                {
+                    Close();
+                }
+            }
+
             
         }
 

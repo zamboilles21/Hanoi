@@ -23,7 +23,8 @@ namespace HANOI
         static int[] tower1 = new int[7];
         static int[] tower2 = new int[7];
         static int[] tower3 = new int[7];
-
+        static int START;
+        static int END;
         public Thenottwotowers()
         {
             InitializeComponent();
@@ -92,17 +93,17 @@ namespace HANOI
 
         private void btn_up_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(START.ToString());
         }
 
         private void btn_down_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(END.ToString());
         }
 
         private void btn_right_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(START.ToString());
         }
 
         private void btn_left_Click(object sender, EventArgs e)
