@@ -29,20 +29,18 @@ namespace HANOI
             InitializeComponent();
             
         }
-
-        private void Thenottwotowers_Load(object sender, EventArgs e)
+        private void Thenottwotowers_Load_1(object sender, EventArgs e)
         {
             generatediscs(placeholder);
-
-            
-
         }
+
 
         private void generatediscs(int v)
         {
             int width=0;
             int x=1;
             int y=1;
+            
             switch (placeholder2)
             {
                 case 1:
@@ -79,16 +77,16 @@ namespace HANOI
             
             for (int i = 0; i < placeholder; i++)
             {
-                Panel uj = new Panel();
-                uj.Location = new Point(x+10,y-30);
-                uj.Size = new Size(width-20, 20);
-                uj.BackColor=Color.Gold;
-                uj.Name = $"{i}_disc";
-                width = uj.Width;
-                x = uj.Location.X;
-                y = uj.Location.Y;
-                this.Controls.Add(uj);
-                panelek[i] = uj;
+                Panel uj2 = new Panel();
+                uj2.Location = new Point(x+10,y-30);
+                uj2.Size = new Size(width-20, 20);
+                uj2.BackColor=Color.Gold;
+                uj2.Name = $"{i}_disc";
+                width = uj2.Width;
+                x = uj2.Location.X;
+                y = uj2.Location.Y;
+                this.Controls.Add(uj2);
+                panelek[i] = uj2;
             }
         }
 
@@ -110,6 +108,11 @@ namespace HANOI
         private void btn_left_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         
