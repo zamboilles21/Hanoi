@@ -30,6 +30,14 @@ namespace HANOI
             InitializeComponent();
             
         }
+        public void abSTART(int start)
+        {
+            START = start;
+        }
+        public void abEND(int end)
+        {
+            END = end;
+        }
         private void Thenottwotowers_Load_1(object sender, EventArgs e)
         {
             generatediscs(placeholder);
