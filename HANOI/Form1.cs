@@ -15,6 +15,7 @@ namespace HANOI
         
         public static int start;
         public static int end;
+        public static int discs;
         public Form1()
         {
             InitializeComponent();
@@ -32,8 +33,7 @@ namespace HANOI
             Thenottwotowers uj = new Thenottwotowers();
 
             this.Hide();
-            uj.abSTART(start);
-            uj.abEND(end);
+            uj.abSTART(start,end,discs);
             uj.Show();
             
             string message = $"A kezdő: {start.ToString()} az érkező: {end.ToString()}";
@@ -137,6 +137,21 @@ namespace HANOI
             {
                 rdbtn_start_1.Enabled = true;
             }
+        }
+
+        private void rdbtn_disc_1_CheckedChanged(object sender, EventArgs e)
+        {
+            discs = 3;
+        }
+
+        private void rdbtn_disc_2_CheckedChanged(object sender, EventArgs e)
+        {
+            discs = 5;
+        }
+
+        private void rdbtn_disc_3_CheckedChanged(object sender, EventArgs e)
+        {
+            discs = 7;
         }
     }
 }

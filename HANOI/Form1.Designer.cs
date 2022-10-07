@@ -96,6 +96,7 @@ namespace HANOI
             // rdbtn_end_3
             // 
             this.rdbtn_end_3.AutoSize = true;
+            this.rdbtn_end_3.Checked = true;
             this.rdbtn_end_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rdbtn_end_3.Location = new System.Drawing.Point(106, 12);
             this.rdbtn_end_3.Name = "rdbtn_end_3";
@@ -143,6 +144,7 @@ namespace HANOI
             // rdbtn_start_1
             // 
             this.rdbtn_start_1.AutoSize = true;
+            this.rdbtn_start_1.Checked = true;
             this.rdbtn_start_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rdbtn_start_1.Location = new System.Drawing.Point(6, 12);
             this.rdbtn_start_1.Name = "rdbtn_start_1";
@@ -193,6 +195,7 @@ namespace HANOI
             // rdbtn_disc_1
             // 
             this.rdbtn_disc_1.AutoSize = true;
+            this.rdbtn_disc_1.Checked = true;
             this.rdbtn_disc_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rdbtn_disc_1.Location = new System.Drawing.Point(6, 13);
             this.rdbtn_disc_1.Name = "rdbtn_disc_1";
@@ -201,6 +204,7 @@ namespace HANOI
             this.rdbtn_disc_1.TabStop = true;
             this.rdbtn_disc_1.Text = "3";
             this.rdbtn_disc_1.UseVisualStyleBackColor = true;
+            this.rdbtn_disc_1.CheckedChanged += new System.EventHandler(this.rdbtn_disc_1_CheckedChanged);
             // 
             // rdbtn_disc_3
             // 
@@ -210,9 +214,9 @@ namespace HANOI
             this.rdbtn_disc_3.Name = "rdbtn_disc_3";
             this.rdbtn_disc_3.Size = new System.Drawing.Size(44, 33);
             this.rdbtn_disc_3.TabIndex = 11;
-            this.rdbtn_disc_3.TabStop = true;
             this.rdbtn_disc_3.Text = "7";
             this.rdbtn_disc_3.UseVisualStyleBackColor = true;
+            this.rdbtn_disc_3.CheckedChanged += new System.EventHandler(this.rdbtn_disc_3_CheckedChanged);
             // 
             // rdbtn_disc_2
             // 
@@ -222,9 +226,9 @@ namespace HANOI
             this.rdbtn_disc_2.Name = "rdbtn_disc_2";
             this.rdbtn_disc_2.Size = new System.Drawing.Size(44, 33);
             this.rdbtn_disc_2.TabIndex = 12;
-            this.rdbtn_disc_2.TabStop = true;
             this.rdbtn_disc_2.Text = "5";
             this.rdbtn_disc_2.UseVisualStyleBackColor = true;
+            this.rdbtn_disc_2.CheckedChanged += new System.EventHandler(this.rdbtn_disc_2_CheckedChanged);
             // 
             // start_btn
             // 
