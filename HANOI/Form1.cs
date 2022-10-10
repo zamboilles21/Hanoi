@@ -35,7 +35,7 @@ namespace HANOI
             this.Hide();
             uj.abSTART(start,end,discs);
             uj.Show();
-            
+            /*
             string message = $"A kezdő: {start.ToString()} az érkező: {end.ToString()}";
             string title = "Ellenőrzés";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -56,7 +56,7 @@ namespace HANOI
                     Close();
                 }
             }
-
+            */
             
         }
 

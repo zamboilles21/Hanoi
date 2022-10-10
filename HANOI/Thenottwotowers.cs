@@ -18,12 +18,11 @@ namespace HANOI
         static int START;
         static int END;
         static int DISKS;
-        static int[,] field=new int[3,4];
         Panel[] panelek = new Panel[7];
         static int handlocation=0;
-        static int[] tower1 = new int[7];
-        static int[] tower2 = new int[7];
-        static int[] tower3 = new int[7];
+        static List<int> tower1 = new List<int>();
+        static List<int> tower2 = new List<int>();
+        static List<int> tower3 =new List<int>();
         
         public Thenottwotowers()
         {
@@ -44,6 +43,10 @@ namespace HANOI
             torony2.SendToBack();
             torony3.SendToBack();
             generatediscs(START);
+            for (int i = 0; i < DISKS; i++)
+            {
+                label1.Text += tower1[i] + ", ";
+            }
             for (int i = 0; i < DISKS; i++)
             {
                 torony1.SendToBack();
@@ -67,11 +70,11 @@ namespace HANOI
                     width = panel_tower_1.Width;
                     panel_tower_1_light.BackColor = Color.Red;
                     handlocation = 1;
-                    for (int i = 0; i < DISKS; i++)
+                    for (int i = DISKS; i >0 ; i--)
                     {
-                        tower1[i] = i;
-                        tower2[i] = 0;
-                        tower3[i] = 0;
+                        tower1.Add(i);
+                        tower2.Add(0);
+                        tower3.Add(0);
                     }
                     break;
                 case 2:
@@ -80,11 +83,11 @@ namespace HANOI
                     width = panel_tower_2.Width;
                     panel_tower_2_light.BackColor = Color.Red;
                     handlocation = 2;
-                    for (int i = 0; i < DISKS; i++)
+                    for (int i = DISKS; i > 0; i--)
                     {
-                        tower2[i] = i;
-                        tower1[i] = 0;
-                        tower3[i] = 0;
+                        tower2.Add(i);
+                        tower1.Add(0);
+                        tower3.Add(0);
                     }
                     break;
                 case 3:
@@ -93,11 +96,11 @@ namespace HANOI
                     width = panel_tower_3.Width;
                     panel_tower_3_light.BackColor = Color.Red;
                     handlocation = 3;
-                    for (int i = 0; i < DISKS; i++)
+                    for (int i = DISKS; i > 0; i--)
                     {
-                        tower3[i] = i;
-                        tower2[i] = 0;
-                        tower1[i] = 0;
+                        tower3.Add(i);
+                        tower2.Add(0);
+                        tower1.Add(0);
                     }
                     break;
             }
@@ -124,19 +127,88 @@ namespace HANOI
 
         private void btn_up_Click(object sender, EventArgs e)
         {
-            
+            //majd otthon megcsinálom
+            int x = panelek[0].Location.X;
+            int y = panelek[0].Location.Y-100;
+
             switch (handlocation)
             {
                 case 1:
-                    
+                    if (emptytower())
+                    {
+                        switch (tower1[tower1.Count-1])
+                        {
+                            case 1:
+                                panelek[0].Location = new Point(x, y);
+                                break;
+                        }
+                    } 
                     break;
                 case 2:
-                    
+                    if (emptytower())
+                    {
+
+                    }
                     break;
                 case 3:
-                    
+                    if (emptytower())
+                    {
+
+                    }
                     break;
             }
+        }
+
+        private bool emptytower()
+        {
+            bool empty = false ;
+            switch (handlocation)
+            {
+                case 1:
+                    empty = false;
+                    for (int i = 0; i < DISKS; i++)
+                    {
+                        if (tower1[i]!=0)
+                        {
+                            empty = true;
+                        }
+                    }
+                    if (!empty)
+                    {
+                        MessageBox.Show("Ezen a tornyon nincs korong");
+                    }
+                    break;
+                case 2:
+                    empty = false;
+                    for (int i = 0; i < DISKS; i++)
+                    {
+                        if (tower2[i] != 0)
+                        {
+                            empty = true;
+                        }
+                    }
+                    if (!empty)
+                    {
+                        MessageBox.Show("Ezen a tornyon nincs korong");
+                    }
+                    break;
+                case 3:
+                    empty = false;
+                    for (int i = 0; i < DISKS; i++)
+                    {
+                        if (tower3[i] != 0)
+                        {
+                            empty = true;
+                        }
+                    }
+                    if (!empty)
+                    {
+                        MessageBox.Show("Ezen a tornyon nincs korong");
+                    }
+
+                    break;
+            }
+            return empty;
         }
 
         private void btn_down_Click(object sender, EventArgs e)
@@ -146,13 +218,82 @@ namespace HANOI
 
         private void nyertunke(int variable)
         {
+            bool illik = false;
             switch (variable)
             {
                 case 1:
-                    bool illik = false;
+                    
                     for (int i = 0; i < DISKS; i++)
                     {
                         if (tower1[i]!=i)
+                        {
+                            illik = true;
+                            break;
+                        }
+                    }
+                    if (!illik)
+                    {
+                        string message = "hurá hurá hurá jaj de nagyon jó, hogy nyertél. akarsz újra játszani?";
+                        string title = "jéj nyertél";
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
+                            if (result2 == DialogResult.Yes)
+                            {
+                                Application.Restart();
+                            }
+                            else
+                            {
+                                Application.Exit();
+                            }
+                        }
+                    }
+                    break;
+                case 2:
+
+                    for (int i = 0; i < DISKS; i++)
+                    {
+                        if (tower2[i] != i)
+                        {
+                            illik = true;
+                            break;
+                        }
+                    }
+                    if (!illik)
+                    {
+                        string message = "hurá hurá hurá jaj de nagyon jó, hogy nyertél. akarsz újra játszani?";
+                        string title = "jéj nyertél";
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
+                            if (result2 == DialogResult.Yes)
+                            {
+                                Application.Restart();
+                            }
+                            else
+                            {
+                                Application.Exit();
+                            }
+                        }
+                    }
+                    break;
+                case 3:
+
+                    for (int i = 0; i < DISKS; i++)
+                    {
+                        if (tower3[i] != i)
                         {
                             illik = true;
                             break;
@@ -202,7 +343,7 @@ namespace HANOI
                     handlocation = 3;
                     break;
                 case 3:
-                    MessageBox.Show("the retardált fasszopó cigány már teljesen jobbra vagy, szóval jobbfasz vagy");
+                    MessageBox.Show("Nem lehet kimenni a mapről");
                     break;
             }
         }
@@ -224,7 +365,7 @@ namespace HANOI
                     handlocation = 2;
                     break;
                 case 1:
-                    MessageBox.Show("the retardált fasszopó cigány már teljesen balra vagy, szóval balfasz vagy");
+                    MessageBox.Show("Nem lehet kimenni a mapről");
                     break;
             }
         }

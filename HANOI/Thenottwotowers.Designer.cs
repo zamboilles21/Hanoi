@@ -46,6 +46,7 @@ namespace HANOI
             this.panel_tower_1_light = new System.Windows.Forms.Panel();
             this.panel_tower_2_light = new System.Windows.Forms.Panel();
             this.panel_tower_3_light = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_left
@@ -191,12 +192,22 @@ namespace HANOI
             this.panel_tower_3_light.Size = new System.Drawing.Size(30, 30);
             this.panel_tower_3_light.TabIndex = 11;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(295, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
+            // 
             // Thenottwotowers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 635);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_tower_3_light);
             this.Controls.Add(this.panel_tower_2_light);
             this.Controls.Add(this.panel_tower_1_light);
@@ -218,6 +229,7 @@ namespace HANOI
             this.Text = "Thenottwotowers";
             this.Load += new System.EventHandler(this.Thenottwotowers_Load_1);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -240,5 +252,6 @@ namespace HANOI
         private System.Windows.Forms.Panel panel_tower_1_light;
         private System.Windows.Forms.Panel panel_tower_2_light;
         private System.Windows.Forms.Panel panel_tower_3_light;
+        private System.Windows.Forms.Label label1;
     }
 }
