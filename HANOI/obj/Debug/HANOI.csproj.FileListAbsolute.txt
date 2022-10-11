@@ -42,3 +42,14 @@ D:\git4\HANOI\HANOI\obj\Debug\HANOI.csproj.GenerateResource.cache
 D:\git4\HANOI\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
 D:\git4\HANOI\HANOI\obj\Debug\HANOI.exe
 D:\git4\HANOI\HANOI\obj\Debug\HANOI.pdb
+E:\suli\c#\hanoi_sajat\HANOI\bin\Debug\HANOI.exe.config
+E:\suli\c#\hanoi_sajat\HANOI\bin\Debug\HANOI.exe
+E:\suli\c#\hanoi_sajat\HANOI\bin\Debug\HANOI.pdb
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.csproj.AssemblyReference.cache
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.Form1.resources
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.Properties.Resources.resources
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.Thenottwotowers.resources
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.csproj.GenerateResource.cache
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.csproj.CoreCompileInputs.cache
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.exe
+E:\suli\c#\hanoi_sajat\HANOI\obj\Debug\HANOI.pdb

@@ -13,9 +13,9 @@ namespace HANOI
     public partial class Form1 : Form
     {
         
-        public static int start;
-        public static int end;
-        public static int discs;
+        public static int start=1;
+        public static int end=3;
+        public static int discs=3;
         public Form1()
         {
             InitializeComponent();

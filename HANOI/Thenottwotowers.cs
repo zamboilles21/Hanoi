@@ -18,12 +18,12 @@ namespace HANOI
         static int START;
         static int END;
         static int DISKS;
-        Panel[] panelek = new Panel[7];
-        static int handlocation=0;
-        static List<int> tower1 = new List<int>();
-        static List<int> tower2 = new List<int>();
-        static List<int> tower3 =new List<int>();
         
+        //static int handlocation=0;
+        static Panel floatingdisk;
+        static List<Panel> tower1 = new List<Panel>();
+        static List<Panel> tower2 = new List<Panel>();
+        static List<Panel> tower3 =new List<Panel>();
         public Thenottwotowers()
         {
             InitializeComponent();
@@ -39,19 +39,16 @@ namespace HANOI
         private void Thenottwotowers_Load_1(object sender, EventArgs e)
         {
            
-            torony1.SendToBack();
-            torony2.SendToBack();
-            torony3.SendToBack();
+            
+            picturetower1.SendToBack();
             generatediscs(START);
+            
             for (int i = 0; i < DISKS; i++)
             {
-                label1.Text += tower1[i] + ", ";
-            }
-            for (int i = 0; i < DISKS; i++)
-            {
-                torony1.SendToBack();
-                torony2.SendToBack();
-                torony3.SendToBack();
+                
+                picturetower1.SendToBack();
+                picturetower2.SendToBack();
+                picturetower3.SendToBack();
             }
         }
 
@@ -69,312 +66,314 @@ namespace HANOI
                     y = panel_tower_1.Location.Y;
                     width = panel_tower_1.Width;
                     panel_tower_1_light.BackColor = Color.Red;
-                    handlocation = 1;
-                    for (int i = DISKS; i >0 ; i--)
+
+                    for (int i = 0; i < DISKS; i++)
                     {
-                        tower1.Add(i);
-                        tower2.Add(0);
-                        tower3.Add(0);
+                        Panel uj2 = new Panel();
+                        uj2.Location = new Point(x + 10, y - 30);
+                        uj2.Size = new Size(width - 20, 20);
+                        uj2.BackColor = Color.Gold;
+                        uj2.Name = $"{i}_disc";
+                        width = uj2.Width;
+                        x = uj2.Location.X;
+                        y = uj2.Location.Y;
+                        for (int j = 0; j < DISKS; j++)
+                        {
+                            uj2.BringToFront();
+                        }
+
+                        this.Controls.Add(uj2);
+                        tower1.Add(uj2);
                     }
+                    
+                    
                     break;
                 case 2:
                     x = panel_tower_2.Location.X;
                     y = panel_tower_2.Location.Y;
                     width = panel_tower_2.Width;
                     panel_tower_2_light.BackColor = Color.Red;
-                    handlocation = 2;
-                    for (int i = DISKS; i > 0; i--)
+
+                    for (int i = 0; i < DISKS; i++)
                     {
-                        tower2.Add(i);
-                        tower1.Add(0);
-                        tower3.Add(0);
+                        Panel uj2 = new Panel();
+                        uj2.Location = new Point(x + 10, y - 30);
+                        uj2.Size = new Size(width - 20, 20);
+                        uj2.BackColor = Color.Gold;
+                        uj2.Name = $"{i}_disc";
+                        width = uj2.Width;
+                        x = uj2.Location.X;
+                        y = uj2.Location.Y;
+                        for (int j = 0; j < DISKS; j++)
+                        {
+                            uj2.BringToFront();
+                        }
+
+                        this.Controls.Add(uj2);
+                        tower2.Add(uj2);
                     }
+
+                    
                     break;
                 case 3:
                     x = panel_tower_3.Location.X;
                     y = panel_tower_3.Location.Y;
                     width = panel_tower_3.Width;
                     panel_tower_3_light.BackColor = Color.Red;
-                    handlocation = 3;
-                    for (int i = DISKS; i > 0; i--)
+
+                    for (int i = 0; i < DISKS; i++)
                     {
-                        tower3.Add(i);
-                        tower2.Add(0);
-                        tower1.Add(0);
+                        Panel uj2 = new Panel();
+                        uj2.Location = new Point(x + 10, y - 30);
+                        uj2.Size = new Size(width - 20, 20);
+                        uj2.BackColor = Color.Gold;
+                        uj2.Name = $"{i}_disc";
+                        width = uj2.Width;
+                        x = uj2.Location.X;
+                        y = uj2.Location.Y;
+                        for (int j = 0; j < DISKS; j++)
+                        {
+                            uj2.BringToFront();
+                        }
+
+                        this.Controls.Add(uj2);
+                        tower3.Add(uj2);
                     }
+
+                    
                     break;
             }
             
-            for (int i = 0; i < DISKS; i++)
+            
+        }
+
+        private void picturetower1_Click(object sender, EventArgs e)
+        {
+            
+            if (tower1.Count() > 0&&floatingdisk==null)
             {
-                Panel uj2 = new Panel();
-                uj2.Location = new Point(x+10,y-30);
-                uj2.Size = new Size(width-20, 20);
-                uj2.BackColor=Color.Gold;
-                uj2.Name = $"{i}_disc";
-                width = uj2.Width;
-                x = uj2.Location.X;
-                y = uj2.Location.Y;
-                for (int j = 0; j < DISKS; j++)
+                floatingdisk = tower1[tower1.Count() - 1];
+                tower1.RemoveAt(tower1.Count() - 1);
+                panel_tower_1_light.BackColor = Color.Red;
+                panel_tower_3_light.BackColor = Color.Transparent;
+                panel_tower_2_light.BackColor = Color.Transparent;
+
+            }
+            else if (floatingdisk != null&& tower1.Count()==0)
+            {
+                tower1.Add(floatingdisk);
+                mozgat(floatingdisk,panel_tower_1,1);
+                dimthelights();
+                floatingdisk = null;
+            }
+            else if (floatingdisk != null && tower1.Count() > 0)
+            {
+                if (floatingdisk.Width<tower1[tower1.Count() - 1].Width)
                 {
-                    uj2.BringToFront();
+                    tower1.Add(floatingdisk);
+                    mozgat(floatingdisk, panel_tower_1, tower1.Count);
+                    dimthelights();
+                    floatingdisk = null;
                 }
                 
-                this.Controls.Add(uj2);
-                panelek[i] = uj2;
             }
+            nyertunke();
         }
+
+        private void dimthelights()
+        {
+            panel_tower_3_light.BackColor = Color.Transparent;
+            panel_tower_2_light.BackColor = Color.Transparent;
+            panel_tower_1_light.BackColor = Color.Transparent;
+        }
+
+        private void mozgat(Panel floatingdisk, Panel towerpos,int disccount)
+        {
+            floatingdisk.Location = new Point(towerpos.Location.X+( (towerpos.Width-floatingdisk.Width)/2),towerpos.Location.Y- (disccount*30));
+
+        }
+
+        private void picturetower2_Click(object sender, EventArgs e)
+        {
+
+            
+            if (tower2.Count() > 0 && floatingdisk == null)
+            {
+                floatingdisk = tower2[tower2.Count() - 1];
+                tower2.RemoveAt(tower2.Count() - 1);
+                panel_tower_2_light.BackColor = Color.Red;
+                panel_tower_1_light.BackColor = Color.Transparent;
+                panel_tower_3_light.BackColor = Color.Transparent;
+            }
+            else if (floatingdisk != null && tower2.Count() == 0)
+            {
+                tower2.Add(floatingdisk);
+                mozgat(floatingdisk, panel_tower_2, 1);
+                dimthelights();
+
+                floatingdisk = null;
+            }
+            else if (floatingdisk != null && tower2.Count() > 0)
+            {
+                if (floatingdisk.Width < tower2[tower2.Count() - 1].Width)
+                {
+                    tower2.Add(floatingdisk);
+                    mozgat(floatingdisk, panel_tower_2, tower2.Count);
+                    dimthelights();
+                    floatingdisk = null;
+                }
+            }
+            nyertunke();
+        }
+
+        private void picturetower3_Click(object sender, EventArgs e)
+        {
+            
+            if (tower3.Count()>0 && floatingdisk == null)
+            {
+                floatingdisk = tower3[tower3.Count() - 1];
+                tower3.RemoveAt(tower3.Count() - 1);
+                panel_tower_3_light.BackColor = Color.Red;
+                panel_tower_1_light.BackColor = Color.Transparent;
+                panel_tower_2_light.BackColor = Color.Transparent;
+            }
+            else if (floatingdisk != null && tower3.Count() == 0)
+            {
+                tower3.Add(floatingdisk);
+                mozgat(floatingdisk, panel_tower_3, 1);
+                dimthelights();
+                floatingdisk = null;
+            }
+            else if (floatingdisk != null && tower3.Count() > 0)
+            {
+                if (floatingdisk.Width < tower3[tower3.Count() - 1].Width)
+                {
+                    tower3.Add(floatingdisk);
+                    mozgat(floatingdisk, panel_tower_3, tower3.Count);
+                    dimthelights();
+                    floatingdisk = null;
+
+                }
+            }
+            nyertunke();
+        }
+
+
+
 
         private void btn_up_Click(object sender, EventArgs e)
         {
-            //majd otthon megcsinálom
-            int x = panelek[0].Location.X;
-            int y = panelek[0].Location.Y-100;
+            
+            
 
-            switch (handlocation)
-            {
-                case 1:
-                    if (emptytower())
-                    {
-                        switch (tower1[tower1.Count-1])
-                        {
-                            case 1:
-                                panelek[0].Location = new Point(x, y);
-                                break;
-                        }
-                    } 
-                    break;
-                case 2:
-                    if (emptytower())
-                    {
-
-                    }
-                    break;
-                case 3:
-                    if (emptytower())
-                    {
-
-                    }
-                    break;
-            }
+            
         }
 
         private bool emptytower()
         {
             bool empty = false ;
-            switch (handlocation)
-            {
-                case 1:
-                    empty = false;
-                    for (int i = 0; i < DISKS; i++)
-                    {
-                        if (tower1[i]!=0)
-                        {
-                            empty = true;
-                        }
-                    }
-                    if (!empty)
-                    {
-                        MessageBox.Show("Ezen a tornyon nincs korong");
-                    }
-                    break;
-                case 2:
-                    empty = false;
-                    for (int i = 0; i < DISKS; i++)
-                    {
-                        if (tower2[i] != 0)
-                        {
-                            empty = true;
-                        }
-                    }
-                    if (!empty)
-                    {
-                        MessageBox.Show("Ezen a tornyon nincs korong");
-                    }
-                    break;
-                case 3:
-                    empty = false;
-                    for (int i = 0; i < DISKS; i++)
-                    {
-                        if (tower3[i] != 0)
-                        {
-                            empty = true;
-                        }
-                    }
+            
+                
                     if (!empty)
                     {
                         MessageBox.Show("Ezen a tornyon nincs korong");
                     }
 
-                    break;
-            }
+                    
             return empty;
         }
 
         private void btn_down_Click(object sender, EventArgs e)
         {
-            nyertunke(END);
+            
         }
 
-        private void nyertunke(int variable)
+        private void nyertunke()
         {
-            bool illik = false;
-            switch (variable)
+            switch (END)
             {
                 case 1:
-                    
-                    for (int i = 0; i < DISKS; i++)
-                    {
-                        if (tower1[i]!=i)
-                        {
-                            illik = true;
-                            break;
-                        }
-                    }
-                    if (!illik)
+                    if (tower1.Count==DISKS)
                     {
                         string message = "hurá hurá hurá jaj de nagyon jó, hogy nyertél. akarsz újra játszani?";
                         string title = "jéj nyertél";
                         MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                         DialogResult result = MessageBox.Show(message, title, buttons);
-                        if (result == DialogResult.Yes)
+                        if (result == DialogResult.No)
                         {
                             Application.Exit();
                         }
                         else
                         {
-                            DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
-                            if (result2 == DialogResult.Yes)
-                            {
+                            
                                 Application.Restart();
-                            }
-                            else
-                            {
-                                Application.Exit();
-                            }
+                            
                         }
+
                     }
                     break;
                 case 2:
-
-                    for (int i = 0; i < DISKS; i++)
-                    {
-                        if (tower2[i] != i)
-                        {
-                            illik = true;
-                            break;
-                        }
-                    }
-                    if (!illik)
+                    if (tower2.Count == DISKS)
                     {
                         string message = "hurá hurá hurá jaj de nagyon jó, hogy nyertél. akarsz újra játszani?";
                         string title = "jéj nyertél";
                         MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                         DialogResult result = MessageBox.Show(message, title, buttons);
-                        if (result == DialogResult.Yes)
+                        if (result == DialogResult.No)
                         {
                             Application.Exit();
                         }
                         else
                         {
-                            DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
-                            if (result2 == DialogResult.Yes)
-                            {
-                                Application.Restart();
-                            }
-                            else
-                            {
-                                Application.Exit();
-                            }
+
+                            Application.Restart();
+
                         }
+
                     }
                     break;
                 case 3:
-
-                    for (int i = 0; i < DISKS; i++)
-                    {
-                        if (tower3[i] != i)
-                        {
-                            illik = true;
-                            break;
-                        }
-                    }
-                    if (!illik)
+                    if (tower3.Count == DISKS)
                     {
                         string message = "hurá hurá hurá jaj de nagyon jó, hogy nyertél. akarsz újra játszani?";
                         string title = "jéj nyertél";
                         MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                         DialogResult result = MessageBox.Show(message, title, buttons);
-                        if (result == DialogResult.Yes)
+                        if (result == DialogResult.No)
                         {
                             Application.Exit();
                         }
                         else
                         {
-                            DialogResult result2 = MessageBox.Show("Kezdjük előről? ", "Biztos?", MessageBoxButtons.YesNo);
-                            if (result2 == DialogResult.Yes)
-                            {
-                                Application.Restart();
-                            }
-                            else
-                            {
-                                Application.Exit();
-                            }
+
+                            Application.Restart();
+
                         }
+
                     }
                     break;
             }
-        }
 
+        }
+        
         private void btn_right_Click(object sender, EventArgs e)
         {
-            switch (handlocation)
-            {
-                case 1:
-                    panel_tower_2_light.BackColor = Color.Red;
-                    panel_tower_1_light.BackColor = Color.Transparent;
-                    panel_tower_3_light.BackColor = Color.Transparent;
-                    handlocation = 2;
-                    break;
-                case 2:
-                    panel_tower_3_light.BackColor = Color.Red;
-                    panel_tower_1_light.BackColor = Color.Transparent;
-                    panel_tower_2_light.BackColor = Color.Transparent;
-                    handlocation = 3;
-                    break;
-                case 3:
-                    MessageBox.Show("Nem lehet kimenni a mapről");
-                    break;
-            }
+            
         }
 
         private void btn_left_Click(object sender, EventArgs e)
         {
-            switch (handlocation)
-            {
-                case 2:
-                    panel_tower_1_light.BackColor = Color.Red;
-                    panel_tower_2_light.BackColor = Color.Transparent;
-                    panel_tower_3_light.BackColor = Color.Transparent;
-                    handlocation = 1;
-                    break;
-                case 3:
-                    panel_tower_2_light.BackColor = Color.Red;
-                    panel_tower_1_light.BackColor = Color.Transparent;
-                    panel_tower_3_light.BackColor = Color.Transparent;
-                    handlocation = 2;
-                    break;
-                case 1:
-                    MessageBox.Show("Nem lehet kimenni a mapről");
-                    break;
-            }
+            
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        
+        private void btn_restart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

@@ -34,10 +34,7 @@ namespace HANOI
             this.btn_up = new System.Windows.Forms.Button();
             this.btn_down = new System.Windows.Forms.Button();
             this.panel_tower_1 = new System.Windows.Forms.Panel();
-            this.torony1 = new System.Windows.Forms.Panel();
-            this.torony2 = new System.Windows.Forms.Panel();
             this.panel_tower_2 = new System.Windows.Forms.Panel();
-            this.torony3 = new System.Windows.Forms.Panel();
             this.panel_tower_3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -46,47 +43,57 @@ namespace HANOI
             this.panel_tower_1_light = new System.Windows.Forms.Panel();
             this.panel_tower_2_light = new System.Windows.Forms.Panel();
             this.panel_tower_3_light = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.picturetower1 = new System.Windows.Forms.PictureBox();
+            this.picturetower2 = new System.Windows.Forms.PictureBox();
+            this.picturetower3 = new System.Windows.Forms.PictureBox();
+            this.btn_restart = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picturetower1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturetower2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturetower3)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_left
             // 
-            this.btn_left.Location = new System.Drawing.Point(323, 547);
+            this.btn_left.Location = new System.Drawing.Point(324, 714);
             this.btn_left.Name = "btn_left";
             this.btn_left.Size = new System.Drawing.Size(50, 50);
             this.btn_left.TabIndex = 0;
             this.btn_left.Text = "Left";
             this.btn_left.UseVisualStyleBackColor = true;
+            this.btn_left.Visible = false;
             this.btn_left.Click += new System.EventHandler(this.btn_left_Click);
             // 
             // btn_right
             // 
-            this.btn_right.Location = new System.Drawing.Point(435, 547);
+            this.btn_right.Location = new System.Drawing.Point(436, 714);
             this.btn_right.Name = "btn_right";
             this.btn_right.Size = new System.Drawing.Size(50, 50);
             this.btn_right.TabIndex = 1;
             this.btn_right.Text = "Right";
             this.btn_right.UseVisualStyleBackColor = true;
+            this.btn_right.Visible = false;
             this.btn_right.Click += new System.EventHandler(this.btn_right_Click);
             // 
             // btn_up
             // 
-            this.btn_up.Location = new System.Drawing.Point(379, 521);
+            this.btn_up.Location = new System.Drawing.Point(380, 688);
             this.btn_up.Name = "btn_up";
             this.btn_up.Size = new System.Drawing.Size(50, 50);
             this.btn_up.TabIndex = 2;
             this.btn_up.Text = "Pick up";
             this.btn_up.UseVisualStyleBackColor = true;
+            this.btn_up.Visible = false;
             this.btn_up.Click += new System.EventHandler(this.btn_up_Click);
             // 
             // btn_down
             // 
-            this.btn_down.Location = new System.Drawing.Point(379, 577);
+            this.btn_down.Location = new System.Drawing.Point(380, 744);
             this.btn_down.Name = "btn_down";
             this.btn_down.Size = new System.Drawing.Size(50, 50);
             this.btn_down.TabIndex = 3;
             this.btn_down.Text = "Drop";
             this.btn_down.UseVisualStyleBackColor = true;
+            this.btn_down.Visible = false;
             this.btn_down.Click += new System.EventHandler(this.btn_down_Click);
             // 
             // panel_tower_1
@@ -97,22 +104,6 @@ namespace HANOI
             this.panel_tower_1.Size = new System.Drawing.Size(220, 20);
             this.panel_tower_1.TabIndex = 4;
             // 
-            // torony1
-            // 
-            this.torony1.BackColor = System.Drawing.Color.Gray;
-            this.torony1.Location = new System.Drawing.Point(165, 128);
-            this.torony1.Name = "torony1";
-            this.torony1.Size = new System.Drawing.Size(30, 310);
-            this.torony1.TabIndex = 5;
-            // 
-            // torony2
-            // 
-            this.torony2.BackColor = System.Drawing.Color.Gray;
-            this.torony2.Location = new System.Drawing.Point(390, 128);
-            this.torony2.Name = "torony2";
-            this.torony2.Size = new System.Drawing.Size(30, 310);
-            this.torony2.TabIndex = 7;
-            // 
             // panel_tower_2
             // 
             this.panel_tower_2.BackColor = System.Drawing.Color.Gray;
@@ -120,14 +111,6 @@ namespace HANOI
             this.panel_tower_2.Name = "panel_tower_2";
             this.panel_tower_2.Size = new System.Drawing.Size(220, 20);
             this.panel_tower_2.TabIndex = 6;
-            // 
-            // torony3
-            // 
-            this.torony3.BackColor = System.Drawing.Color.Gray;
-            this.torony3.Location = new System.Drawing.Point(620, 128);
-            this.torony3.Name = "torony3";
-            this.torony3.Size = new System.Drawing.Size(30, 310);
-            this.torony3.TabIndex = 7;
             // 
             // panel_tower_3
             // 
@@ -163,9 +146,10 @@ namespace HANOI
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(765, 11);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(751, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.Size = new System.Drawing.Size(39, 41);
             this.button1.TabIndex = 9;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -192,22 +176,58 @@ namespace HANOI
             this.panel_tower_3_light.Size = new System.Drawing.Size(30, 30);
             this.panel_tower_3_light.TabIndex = 11;
             // 
-            // label1
+            // picturetower1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(295, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.picturetower1.BackColor = System.Drawing.Color.Gray;
+            this.picturetower1.Location = new System.Drawing.Point(165, 128);
+            this.picturetower1.Name = "picturetower1";
+            this.picturetower1.Size = new System.Drawing.Size(30, 326);
+            this.picturetower1.TabIndex = 13;
+            this.picturetower1.TabStop = false;
+            this.picturetower1.Click += new System.EventHandler(this.picturetower1_Click);
+            // 
+            // picturetower2
+            // 
+            this.picturetower2.BackColor = System.Drawing.Color.Gray;
+            this.picturetower2.Location = new System.Drawing.Point(390, 128);
+            this.picturetower2.Name = "picturetower2";
+            this.picturetower2.Size = new System.Drawing.Size(30, 326);
+            this.picturetower2.TabIndex = 14;
+            this.picturetower2.TabStop = false;
+            this.picturetower2.Click += new System.EventHandler(this.picturetower2_Click);
+            // 
+            // picturetower3
+            // 
+            this.picturetower3.BackColor = System.Drawing.Color.Gray;
+            this.picturetower3.Location = new System.Drawing.Point(620, 128);
+            this.picturetower3.Name = "picturetower3";
+            this.picturetower3.Size = new System.Drawing.Size(30, 326);
+            this.picturetower3.TabIndex = 15;
+            this.picturetower3.TabStop = false;
+            this.picturetower3.Click += new System.EventHandler(this.picturetower3_Click);
+            // 
+            // btn_restart
+            // 
+            this.btn_restart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_restart.Location = new System.Drawing.Point(13, 11);
+            this.btn_restart.Name = "btn_restart";
+            this.btn_restart.Size = new System.Drawing.Size(119, 41);
+            this.btn_restart.TabIndex = 16;
+            this.btn_restart.Text = "Restart";
+            this.btn_restart.UseVisualStyleBackColor = true;
+            this.btn_restart.Click += new System.EventHandler(this.btn_restart_Click);
             // 
             // Thenottwotowers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 635);
+            this.ClientSize = new System.Drawing.Size(800, 508);
             this.ControlBox = false;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_restart);
+            this.Controls.Add(this.picturetower3);
+            this.Controls.Add(this.picturetower2);
+            this.Controls.Add(this.panel_tower_2);
+            this.Controls.Add(this.picturetower1);
             this.Controls.Add(this.panel_tower_3_light);
             this.Controls.Add(this.panel_tower_2_light);
             this.Controls.Add(this.panel_tower_1_light);
@@ -217,19 +237,19 @@ namespace HANOI
             this.Controls.Add(this.btn_right);
             this.Controls.Add(this.btn_left);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.torony3);
             this.Controls.Add(this.panel_tower_3);
-            this.Controls.Add(this.panel_tower_2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.torony1);
             this.Controls.Add(this.panel_tower_1);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.torony2);
+            this.MaximumSize = new System.Drawing.Size(816, 547);
+            this.MinimumSize = new System.Drawing.Size(816, 547);
             this.Name = "Thenottwotowers";
             this.Text = "Thenottwotowers";
             this.Load += new System.EventHandler(this.Thenottwotowers_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.picturetower1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturetower2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturetower3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -240,10 +260,7 @@ namespace HANOI
         private System.Windows.Forms.Button btn_up;
         private System.Windows.Forms.Button btn_down;
         private System.Windows.Forms.Panel panel_tower_1;
-        private System.Windows.Forms.Panel torony1;
-        private System.Windows.Forms.Panel torony2;
         private System.Windows.Forms.Panel panel_tower_2;
-        private System.Windows.Forms.Panel torony3;
         private System.Windows.Forms.Panel panel_tower_3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
@@ -252,6 +269,9 @@ namespace HANOI
         private System.Windows.Forms.Panel panel_tower_1_light;
         private System.Windows.Forms.Panel panel_tower_2_light;
         private System.Windows.Forms.Panel panel_tower_3_light;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picturetower1;
+        private System.Windows.Forms.PictureBox picturetower2;
+        private System.Windows.Forms.PictureBox picturetower3;
+        private System.Windows.Forms.Button btn_restart;
     }
 }
